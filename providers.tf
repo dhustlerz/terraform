@@ -5,4 +5,12 @@ terraform {
       version = "~> 4.0"
     }
   }
+  backend "remote" {
+    organization = "ibt-learning"
+
+    workspaces {
+      name = "ibt-infra"
+    }
+  }
 }
+
